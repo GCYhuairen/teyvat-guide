@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gcyhuairen.github.io/teyvat-guide/sitemap.xml
