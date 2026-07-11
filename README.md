@@ -1,4 +1,4 @@
-# Teyvat Field Archive
+# 提瓦特角色攻略站 · Teyvat Character Guides
 
 A responsive, multilingual Genshin Impact character guide with search, element filters, and compact build cards.
 
