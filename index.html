@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="简洁、可搜索的原神角色养成、武器、圣遗物与配队攻略。">
+  <meta name="theme-color" content="#0d202b">
+  <title>提瓦特攻略图鉴 · Teyvat Field Archive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#top"><span class="brand-mark">T</span><span><b>TEYVAT</b><small data-i18n="archive">提瓦特作战档案</small></span></a>
+    <nav><a href="#guides" data-i18n="navGuides">角色攻略</a><a href="#method" data-i18n="navMethod">使用方法</a><a href="#about" data-i18n="navAbout">关于本站</a></nav>
+    <select id="locale" aria-label="Language"><option value="zh">中文</option><option value="en">English</option><option value="ja">日本語</option><option value="ko">한국어</option></select>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">LUNA VIII · 6.7 数据基线</p>
+        <h1><span data-i18n="titleA">更快找到</span><br><em data-i18n="titleB">真正能用的养成方案。</em></h1>
+        <p class="intro" data-i18n="intro">从角色定位到武器、圣遗物、队伍与输出循环，把分散的信息整理成一张清晰的作战卡。</p>
+        <div class="actions">
+          <label class="search"><span>⌕</span><input id="search" data-i18n-placeholder="searchPlaceholder" placeholder="搜索角色、定位或地区…"><button id="clearSearch" aria-label="Clear">×</button></label>
+          <a class="cta" href="#guides"><span data-i18n="browse">浏览角色</span><b>↓</b></a>
+        </div>
+        <div class="metrics"><span><b>8</b><i data-i18n="guides">份完整攻略</i></span><span><b>4</b><i data-i18n="languages">种界面语言</i></span><span><b>∞</b><i data-i18n="free">免费 · 无登录</i></span></div>
+      </div>
+      <div class="orbit" aria-hidden="true"><div class="ring ring-a"></div><div class="ring ring-b"></div><div class="core"><strong>✦</strong><small>LUNA<br>VIII</small></div></div>
+    </section>
+
+    <section class="guides" id="guides">
+      <div class="section-head"><div><p class="eyebrow dark">BUILD ARCHIVE</p><h2 data-i18n="sectionTitle">选择你的角色</h2><p data-i18n="sectionDesc">可按元素筛选，点击卡片查看完整养成与配队方案。</p></div><strong><span id="count">8</span> <i data-i18n="result">个结果</i></strong></div>
+      <div class="filters" id="filters"></div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden><span>⌕</span><h3 data-i18n="noResult">没有找到符合条件的角色</h3><button id="reset" data-i18n="reset">清除筛选</button></div>
+    </section>
+
+    <section class="method" id="method">
+      <p class="eyebrow">HOW IT WORKS</p><h2 data-i18n="methodTitle">三步完成一次养成决策</h2>
+      <div class="steps">
+        <article><span>01</span><h3 data-i18n="method1">先定定位</h3><p data-i18n="method1d">确认角色是站场输出、后台输出、辅助还是生存位。</p></article>
+        <article><span>02</span><h3 data-i18n="method2">再看资源</h3><p data-i18n="method2d">武器同时提供五星、四星与低成本方案，避免只推荐专武。</p></article>
+        <article><span>03</span><h3 data-i18n="method3">最后配队</h3><p data-i18n="method3d">从核心队伍出发，用替代角色适配自己的角色池。</p></article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div><p class="eyebrow dark">SOURCE NOTES</p><h2 data-i18n="sourceTitle">资料与更新原则</h2><p data-i18n="sourceDesc">角色基础信息以 HoYoverse 官方资料为准；养成与配队建议参考公开机制测试与 KQM 攻略，并在版本变化后复核。</p></div>
+      <div class="sources"><a href="https://genshin.hoyoverse.com/" target="_blank" rel="noreferrer"><span>H</span><b data-i18n="official">官方资料</b><small>genshin.hoyoverse.com ↗</small></a><a href="https://keqingmains.com/" target="_blank" rel="noreferrer"><span>K</span><b data-i18n="theory">机制攻略</b><small>keqingmains.com ↗</small></a></div>
+    </section>
+  </main>
+
+  <footer><b>TEYVAT FIELD ARCHIVE</b><p data-i18n="disclaimer">本网站为非官方玩家攻略项目，与 HoYoverse 无隶属或合作关系。游戏名称与相关权利归其各自权利人所有。</p><small>Version 6.7 · Luna VIII · 2026-07</small></footer>
+
+  <div class="backdrop" id="backdrop" hidden>
+    <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <button class="close" id="close" aria-label="Close">×</button>
+      <div class="modal-hero"><div class="portrait"><strong id="modalGlyph">F</strong><small id="modalMark">✦</small></div><div><p id="modalMeta"></p><h2 id="modalName"></h2><b id="modalRole"></b><span id="modalSummary"></span></div></div>
+      <div class="modal-body"><p class="mini" data-i18n="quickBuild">快速养成</p><div class="build" id="build"></div><div class="details" id="details"></div><aside><b>!</b><div><strong data-i18n="note">实战提示</strong><p id="modalTip"></p></div></aside></div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
